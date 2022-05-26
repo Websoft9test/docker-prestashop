@@ -20,7 +20,7 @@ services:
       - PS_COUNTRY=GB
       - PS_ALL_LANGUAGES=true
       - PS_FOLDER_ADMIN=admin
-      - DB_SERVER=prestashop-mysql
+      - DB_SERVER=mysql
       - DB_USER=${DB_MYSQL_USER}
       - DB_PASSWD=${DB_MYSQL_PASSWORD}
       - PS_ERASE_DB=0
