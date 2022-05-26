@@ -14,8 +14,8 @@ services:
     environment:
       - PS_DEV_MODE=false
       - PS_DEMO_MODE=false
-      #- PS_INSTALL_AUTO=1
-      #- PS_DOMAIN=${APP_SITE_URL}:{APP_PORT}
+      - PS_INSTALL_AUTO=1
+      - PS_DOMAIN=${APP_SITE_URL}:{APP_PORT}
       - PS_LANGUAGE=en
       - PS_COUNTRY=GB
       - PS_ALL_LANGUAGES=true
