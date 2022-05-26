@@ -5,7 +5,7 @@ version: '3.8'
 
 services:
   prestashop:
-    image: prestashop/prestashop:1.7-7.0
+    image: prestashop/prestashop:${APP_VERSION}
     container_name: ${APP_NAME}
     ports:
       - ${APP_PORT}:80
