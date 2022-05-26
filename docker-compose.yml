@@ -29,8 +29,7 @@ services:
       - PS_HANDLE_DYNAMIC_DOMAIN=true
       - ADMIN_MAIL=${EMAIL}
       - ADMIN_PASSWD=${APP_PASSWORD}
-
-    links: 
+    depends_on:
       - mysql
     restart: always
 
@@ -42,8 +41,7 @@ services:
      - ${DB_MYSQL_PORT}:3306
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-      - ${VOLUMES_PATH_PREFIX}/mysql/mysql_config/conf.d:/etc/mysql/conf.d
-      - ${VOLUMES_PATH_PREFIX}/mysql/mysql_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: ${DB_MYSQL_NAME}
       MYSQL_USER: ${DB_MYSQL_USER}
@@ -56,3 +54,4 @@ networks:
 
 volumes:
   prestashop:
+  mysql_data:
