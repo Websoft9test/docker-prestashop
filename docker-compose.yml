@@ -12,8 +12,7 @@ services:
     volumes:
       - prestashop:/var/www/html
     environment:
-      - PS_DEV_MODE=false
-      - PS_DEMO_MODE=true
+      - PS_DEMO_MODE=1
       - PS_INSTALL_AUTO=1
       - PS_DOMAIN=${APP_SITE_URL}:{APP_PORT}
       - PS_LANGUAGE=en
@@ -23,8 +22,8 @@ services:
       - DB_SERVER=mysql
       - DB_USER=${DB_MYSQL_USER}
       - DB_PASSWD=${DB_MYSQL_PASSWORD}
-      - PS_ERASE_DB=0
-      - PS_INSTALL_DB=0
+      - PS_ERASE_DB=1
+      - PS_INSTALL_DB=1
       - DB_PREFIX=ps_
       - PS_HANDLE_DYNAMIC_DOMAIN=true
       - ADMIN_MAIL=${EMAIL}
