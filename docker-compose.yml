@@ -13,7 +13,7 @@ services:
       - prestashop:/var/www/html
     environment:
       - PS_DEV_MODE=false
-      - PS_DEMO_MODE=false
+      - PS_DEMO_MODE=true
       - PS_INSTALL_AUTO=1
       - PS_DOMAIN=${APP_SITE_URL}:{APP_PORT}
       - PS_LANGUAGE=en
