@@ -1,4 +1,5 @@
 # image: https://hub.docker.com/r/prestashop/prestashop
+# docs: https://github.com/PrestaShop/docker
 
 version: '3.8'
 
