@@ -22,7 +22,7 @@ services:
       - DB_USER=${DB_MYSQL_USER}
       - DB_PASSWD=${DB_MYSQL_PASSWORD}
       - DB_PREFIX=ps_
-      - ADMIN_MAIL=${EMAIL}
+      - ADMIN_MAIL=${APP_USER}
       - ADMIN_PASSWD=${APP_PASSWORD}
     depends_on:
       - mysql
